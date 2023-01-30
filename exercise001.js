@@ -19,17 +19,17 @@ const promise = new Promise((resolve, reject) => {
 //   );
 
 // async await + try catch
-const getRandom = async () => {
-  let returnStr = "";
-  let awaitReturn = "";
-  try {
-    awaitReturn = await promise;
-    returnStr = `Yay! Promise resolved with response: ${awaitReturn}`;
-  } catch (e) {
-    returnStr = `Boo. Promise rejected with response: ${awaitReturn}`;
-  } finally {
-    console.log(returnStr);
-  }
-};
+// const getRandom = async () => {
+let returnStr = "";
+let awaitReturn = "";
+try {
+  awaitReturn = await promise;
+  returnStr = `Yay! Promise resolved with response: ${awaitReturn}`;
+} catch (e) {
+  returnStr = `Boo. Promise rejected with response: ${awaitReturn}`;
+} finally {
+  console.log(returnStr);
+}
+// };
 
-getRandom();
+// getRandom();
