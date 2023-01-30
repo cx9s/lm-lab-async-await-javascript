@@ -11,9 +11,25 @@ const promise = new Promise((resolve, reject) => {
   }
 });
 
-// Your solution(s) to exercise001 here!
-promise
-  .then((param) => console.log(`Yay! Promise resolved with response: ${param}`))
-  .catch((param) =>
-    console.log(`Boo. Promise rejected with response: ${param}`)
-  );
+// promise.then().catch()
+// promise
+//   .then((param) => console.log(`Yay! Promise resolved with response: ${param}`))
+//   .catch((param) =>
+//     console.log(`Boo. Promise rejected with response: ${param}`)
+//   );
+
+// async await + try catch
+const getRandom = async () => {
+  let returnStr = "";
+  let awaitReturn = "";
+  try {
+    awaitReturn = await promise;
+    returnStr = `Yay! Promise resolved with response: ${awaitReturn}`;
+  } catch (e) {
+    returnStr = `Boo. Promise rejected with response: ${awaitReturn}`;
+  } finally {
+    console.log(returnStr);
+  }
+};
+
+getRandom();
