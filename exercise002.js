@@ -18,8 +18,9 @@ const requestURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
 const fetchData = async (url) => {
   try {
-    const result = await (await fetch(url)).json();
-    const drink = result.drinks[0];
+    const result = await fetch(url);
+    const json = await result.json();
+    const drink = json.drinks[0];
 
     console.clear();
     console.log(`Here is your random drink, cheers!`);
